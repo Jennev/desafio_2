@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
-import './App.css'
+import "./App.css"
+import "./main.css"
 import Registro from './components/Registro'
 
 const Mensaje = {
