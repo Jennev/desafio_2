@@ -29,7 +29,7 @@ const Formulario = ({ setStatus }) => {
             return;
         }
 
-        if (user.password !== user.confirmContraseña) {
+        if (user.contraseña!== user.confirmContraseña) {
             setStatus("errorContraseña")
             return;
         }
@@ -53,7 +53,7 @@ const Formulario = ({ setStatus }) => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control
                             type="text"
-                            placeholder="tuemail@ejemplo.com"
+                            placeholder="ejemplocorreo@correo.com"
                             onChange={(e) => setUser({ ...user, correo: e.target.value })}
                             value={user.correo}
                         />
@@ -70,7 +70,7 @@ const Formulario = ({ setStatus }) => {
                         <Form.Control
                             type="password"
                             placeholder="Confirma tu contraseña"
-                            onChange={(e) => setUser({ ...user, confirmContraseñad: e.target.value })}
+                            onChange={(e) => setUser({ ...user, confirmContraseña: e.target.value })}
                             value={user.confirmContraseña}
                         />
                     </Form.Group>
