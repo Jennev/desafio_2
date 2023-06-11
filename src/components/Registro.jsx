@@ -1,8 +1,9 @@
-import { useState } from "react";
-import Alert from "./Alert"
-import Formulario from "./Formulario"
-import SocialButton from "./SocialButton"
 
+import SocialButton from "./SocialButton"
+import Alert from "./Alert";
+import Formulario from "./Formulario";
+
+import { useState } from "react";
 
 const Registro = ({ setStatus, estado, mensaje }) => {
     return (
@@ -11,13 +12,9 @@ const Registro = ({ setStatus, estado, mensaje }) => {
                 <h1>
                     Crea una Cuenta
                 </h1>
-                <div className="d-flex gap-3">
-                    <SocialButton icon={"Facebook"} />
-                    <SocialButton icon={"Github"} />
-                    <SocialButton icon={"LinkedIn"} />
-                </div>
+                <SocialButton/>
                 <p className="text-muted">
-                    Usta tu correo para registrarte
+                    o usa tu email para registrarte
                 </p>
                 <Formulario setStatus={setStatus} />
                 <Alert mensaje={mensaje} estado={estado} />
